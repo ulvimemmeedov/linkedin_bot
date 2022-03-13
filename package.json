@@ -5,14 +5,24 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "build":"pkg run/run.js"
   },
+  "bin": "./src/index.js",
+  "pkg": {
+    "assets": [
+        "src/public/**/*"
+    ],
+    "output": "dist"
+},
   "author": "Ulvi Memmedov",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "nodemon": "^2.0.15",
-    "selenium-webdriver": "^4.1.1"
+    "selenium-webdriver": "^4.1.1",
+    "pkg":"5.5.2"
+
   }
 }
